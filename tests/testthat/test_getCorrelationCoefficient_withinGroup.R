@@ -22,6 +22,12 @@ testoutput_acrossgroups =getCorrelationCoefficient_acrossGroup(groupList=phenoty
                                                                tableCountsOnly=countsOnly_log10norm, 
                                                                corrTestMethod="pearson")
 
+# check for correct correlation calculation
+functionCalculated_correlationResult = testoutput_withingroups[[1]][1]
+expectedCorrelationResult = as.numeric(cor.test(as.numeric(countsOnly_log10norm[1,]), 
+                                     as.numeric(countsOnly_log10norm[2,]),
+                                method="pearson")$estimate)
+
 #check number of sample pairs
 a = usecase_metadataFile$SampleID[usecase_metadataFile$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[1]]
 b = usecase_metadataFile$SampleID[usecase_metadataFile$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[2]]
@@ -29,11 +35,6 @@ b = usecase_metadataFile$SampleID[usecase_metadataFile$FMTGroupFMTsourcegtRecipi
 totalSamplePairs_within_a = choose(length(a),2)
 totalSamplePairs_within_b = choose(length(b),2)
 totalSamplePairs_across = length(a) * length(b)
-
-functionCalculated_correlationResult = testoutput_withingroups[[1]][1]
-expectedCorrelationResult = as.numeric(cor.test(as.numeric(countsOnly_log10norm[1,]), 
-                                     as.numeric(countsOnly_log10norm[2,]),
-                                method="pearson")$estimate)
 
 #########################################
 
