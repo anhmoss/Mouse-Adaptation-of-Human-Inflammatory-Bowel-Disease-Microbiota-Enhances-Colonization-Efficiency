@@ -1,5 +1,3 @@
-## unit testing
-
 context("Check output for getCorrelationCoefficient_withinGroup function")
 
 usecase_metadataFile = read.table("./tests/UseCase_MetadataSample_moreSamples.txt", header = T, sep = "\t")
