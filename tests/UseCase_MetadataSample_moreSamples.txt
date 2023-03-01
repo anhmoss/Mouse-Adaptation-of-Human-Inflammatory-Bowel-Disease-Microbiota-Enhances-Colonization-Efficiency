@@ -1,0 +1,13 @@
+SampleID	FMTGroupFMTsourcegtRecipientbackground	Phylum
+g1KO.1	1gKOinput	Firmicutes
+g1KO.2	1gKOinput	Firmicutes
+g1KO.3	1gKOinput	Bacteroides
+g1KO.4	1gKOinput	Bacteroides
+g1KO.5	1gKOinput	Firmicutes
+g1KO.6	1gKOinput	Firmicutes
+g1KO.7	1gKOinput	Bacteroides
+g1WT.1	1gWTinput	Bacteroides
+g1WT.2	1gWTinput	Bacteroides
+g1WT.3	1gWTinput	Firmicutes
+g1WT.4	1gWTinput	Bacteroides
+g1WT.5	1gWTinput	Bacteroides
