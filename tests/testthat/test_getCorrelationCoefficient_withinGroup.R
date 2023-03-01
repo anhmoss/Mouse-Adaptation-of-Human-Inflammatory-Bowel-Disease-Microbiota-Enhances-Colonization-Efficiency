@@ -3,7 +3,7 @@
 context("Check output for getCorrelationCoefficient_withinGroup function")
 
 usecase_metadataFile = read.table("./tests/testthat/UseCase_MetadataSample_moreSamples.txt", header = T, sep = "\t")
-usecase_asvFile = read.table("./tests/testthat/UseCase_sampleByTaxaFormat.txt", header = T, sep = "\t")
+usecase_asvFile = read.table("./tests/UseCase_sampleByTaxaFormat.txt", header = T, sep = "\t")
 
 countsOnly_log10norm = lognorm_function(usecase_asvFile[2:ncol(usecase_asvFile)])
 ##need to set rownames as sampleID
