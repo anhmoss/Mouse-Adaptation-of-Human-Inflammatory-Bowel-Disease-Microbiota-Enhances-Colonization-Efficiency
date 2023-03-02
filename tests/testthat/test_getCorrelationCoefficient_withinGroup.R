@@ -4,7 +4,8 @@ usecase_metadataFile = read.table("./tests/UseCase_MetadataSample_moreSamples.tx
 usecase_asvFile = read.table("./tests/UseCase_sampleByTaxaFormat.txt", header = T, sep = "\t")
 
 countsOnly_log10norm = lognorm_function(usecase_asvFile[2:ncol(usecase_asvFile)])
-##need to set rownames as sampleID
+
+## set rownames as sampleID
 rownames(countsOnly_log10norm)=usecase_asvFile$SampleID
 
 countsWithMetadata = countsOnly_log10norm
@@ -12,15 +13,11 @@ countsWithMetadata$SampleID = usecase_asvFile$SampleID
 countsWithMetadata = full_join(countsWithMetadata, usecase_metadataFile, by="SampleID")
 
 phenotypeList = unique(countsWithMetadata$FMTGroupFMTsourcegtRecipientbackground)
-phylumLIst = unique(countsWithMetadata$Phylum)
-
 
 testoutput_withingroups = getCorrelationCoefficient_withinGroup(groupList=phenotypeList, tableWithMeta=countsWithMetadata, 
                                                                 tableCountsOnly=countsOnly_log10norm, 
                                                                 corrTestMethod="pearson")
-testoutput_acrossgroups =getCorrelationCoefficient_acrossGroup(groupList=phenotypeList, tableWithMeta=countsWithMetadata, 
-                                                               tableCountsOnly=countsOnly_log10norm, 
-                                                               corrTestMethod="pearson")
+
 
 # check for correct correlation calculation
 functionCalculated_correlationResult = testoutput_withingroups[[1]][1]
