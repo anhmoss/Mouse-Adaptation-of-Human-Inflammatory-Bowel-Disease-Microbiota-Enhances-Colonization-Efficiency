@@ -31,7 +31,6 @@ b = usecase_metadataFile$SampleID[usecase_metadataFile$FMTGroupFMTsourcegtRecipi
 
 totalSamplePairs_within_a = choose(length(a),2)
 totalSamplePairs_within_b = choose(length(b),2)
-totalSamplePairs_across = length(a) * length(b)
 
 #########################################
 
@@ -45,6 +44,3 @@ test_that("Check for correct total number of correlations, within group  ",
 test_that("Check for correct total number of correlations, within group  ",
           expect_that(length(testoutput_withingroups[[2]]), equals(totalSamplePairs_within_b))
 )
-
-
-
