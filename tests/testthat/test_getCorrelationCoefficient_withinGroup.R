@@ -16,7 +16,9 @@ phenotypeList = unique(countsWithMetadata$FMTGroupFMTsourcegtRecipientbackground
 
 testoutput_withingroups = getCorrelationCoefficient_withinGroup(groupList=phenotypeList, tableWithMeta=countsWithMetadata, 
                                                                 tableCountsOnly=countsOnly_log10norm, 
-                                                                corrTestMethod="pearson")
+                                                                corrTestMethod="pearson", 
+                                                                variableName = "FMTGroupFMTsourcegtRecipientbackground",
+                                                                sampleColumnName = "SampleID")
 
 
 # check for correct correlation calculation
