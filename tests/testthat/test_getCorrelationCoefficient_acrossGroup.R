@@ -15,7 +15,9 @@ phenotypeList = unique(countsWithMetadata$FMTGroupFMTsourcegtRecipientbackground
 
 testoutput_acrossgroups =getCorrelationCoefficient_acrossGroup(groupList=phenotypeList, tableWithMeta=countsWithMetadata, 
                                                                tableCountsOnly=countsOnly_log10norm, 
-                                                               corrTestMethod="pearson")
+                                                               corrTestMethod="pearson",
+                                                               variableName = "FMTGroupFMTsourcegtRecipientbackground",
+                                                                sampleColumnName = "SampleID")
 # subset for correlation check
 subset_group1=countsOnly_log10norm[countsWithMetadata$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[1],]
 subset_group2=countsOnly_log10norm[countsWithMetadata$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[2],]
