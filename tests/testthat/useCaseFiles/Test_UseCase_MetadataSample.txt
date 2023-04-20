@@ -1,0 +1,6 @@
+SampleID	FMTGroupFMTsourcegtRecipientbackground	Phylum	SampleType
+g1KO.1	1gKOinput	Firmicutes	FecalslurryinLB+20pcntglycerol
+g1KO.2	1gKOinput	Firmicutes	FecalslurryinLB+20pcntglycerol
+g1KO.3	1gKOinput	Bacteroides	FecalslurryinLB+20pcntglycerol
+g1WT.1	1gWTinput	Bacteroides	FecalslurryinLB+20pcntglycerol
+g1WT.2	1gWTinput	Bacteroides	FecalslurryinLB+20pcntglycerol
