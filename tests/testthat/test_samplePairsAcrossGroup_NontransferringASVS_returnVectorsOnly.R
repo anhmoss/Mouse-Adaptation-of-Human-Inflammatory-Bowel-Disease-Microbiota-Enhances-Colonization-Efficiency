@@ -1,7 +1,7 @@
 context("Check output for samplePairsAcrossGroup_NontransferringASVS_returnVectorsOnly function")
 
-metadataFile_path=test_path("UseCase_MetadataSample_moreSamples.txt")
-asvFile_path=test_path("UseCase_nontransferredASVsCountsTable.txt")
+metadataFile_path=test_path("useCaseFiles/UseCase_MetadataSample_moreSamples.txt")
+asvFile_path=test_path("useCaseFiles/UseCase_nontransferredASVsCountsTable.txt")
 
 usecase_metadataFile = read.table(metadataFile_path, header = T, sep = "\t")
 usecase_asvFile = read.table(asvFile_path, header = T, sep = "\t")

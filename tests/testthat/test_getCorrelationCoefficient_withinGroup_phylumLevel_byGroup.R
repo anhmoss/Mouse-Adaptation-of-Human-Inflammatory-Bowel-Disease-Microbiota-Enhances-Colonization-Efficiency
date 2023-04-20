@@ -1,8 +1,8 @@
 context("Check for correct output from getCorrelationCoefficient_withinGroup_phylumLevel_byGroup function")
 
-metadataFile_path=test_path("UseCase_MetadataSample_moreSamples.txt")
-asvFile_path=test_path("UseCase_sampleByTaxaFormat.txt")
-asv_phylum_map = test_path("UseCase_asv_phylum_map.txt")
+metadataFile_path=test_path("useCaseFiles/UseCase_MetadataSample_moreSamples.txt")
+asvFile_path=test_path("useCaseFiles/UseCase_sampleByTaxaFormat.txt")
+asv_phylum_map = test_path("useCaseFiles/UseCase_asv_phylum_map.txt")
 
 usecase_metadataFile = read.table(metadataFile_path, header = T, sep = "\t")
 usecase_asvFile = read.table(asvFile_path, header = T, sep = "\t", check.names = F)

@@ -1,7 +1,11 @@
 context("Check output for getCorrelationCoefficient_acrossGroup function")
 
-usecase_metadataFile = read.table("./tests/UseCase_MetadataSample_moreSamples.txt", header = T, sep = "\t")
-usecase_asvFile = read.table("./tests/UseCase_sampleByTaxaFormat.txt", header = T, sep = "\t")
+metadataFile_path=test_path("useCaseFiles/UseCase_MetadataSample_moreSamples.txt")
+asvFile_path=test_path("useCaseFiles/UseCase_sampleByTaxaFormat.txt")
+
+usecase_metadataFile = read.table(metadataFile_path, header = T, sep = "\t")
+usecase_asvFile = read.table(asvFile_path, header = T, sep = "\t")
+
 
 countsOnly_log10norm = lognorm_function(usecase_asvFile[2:ncol(usecase_asvFile)])
 ##need to set rownames as sampleID
@@ -17,7 +21,7 @@ testoutput_acrossgroups =getCorrelationCoefficient_acrossGroup(groupList=phenoty
                                                                tableCountsOnly=countsOnly_log10norm, 
                                                                corrTestMethod="pearson",
                                                                variableName = "FMTGroupFMTsourcegtRecipientbackground",
-                                                                sampleColumnName = "SampleID")
+                                                               sampleColumnName = "SampleID")
 # subset for correlation check
 subset_group1=countsOnly_log10norm[countsWithMetadata$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[1],]
 subset_group2=countsOnly_log10norm[countsWithMetadata$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[2],]

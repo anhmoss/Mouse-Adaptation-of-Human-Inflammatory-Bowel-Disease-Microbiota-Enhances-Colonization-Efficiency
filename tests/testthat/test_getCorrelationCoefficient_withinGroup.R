@@ -1,11 +1,13 @@
 context("Check output for getCorrelationCoefficient_withinGroup function")
 
-usecase_metadataFile = read.table("./tests/UseCase_MetadataSample_moreSamples.txt", header = T, sep = "\t")
-usecase_asvFile = read.table("./tests/UseCase_sampleByTaxaFormat.txt", header = T, sep = "\t")
+metadataFile_path=test_path("useCaseFiles/UseCase_MetadataSample_moreSamples.txt")
+asvFile_path=test_path("useCaseFiles/UseCase_sampleByTaxaFormat.txt")
+
+usecase_metadataFile = read.table(metadataFile_path, header = T, sep = "\t")
+usecase_asvFile = read.table(asvFile_path, header = T, sep = "\t")
 
 countsOnly_log10norm = lognorm_function(usecase_asvFile[2:ncol(usecase_asvFile)])
-
-## set rownames as sampleID
+##need to set rownames as sampleID
 rownames(countsOnly_log10norm)=usecase_asvFile$SampleID
 
 countsWithMetadata = countsOnly_log10norm
@@ -20,19 +22,21 @@ testoutput_withingroups = getCorrelationCoefficient_withinGroup(groupList=phenot
                                                                 variableName = "FMTGroupFMTsourcegtRecipientbackground",
                                                                 sampleColumnName = "SampleID")
 
-
 # check for correct correlation calculation
 functionCalculated_correlationResult = testoutput_withingroups[[1]][1]
 expectedCorrelationResult = as.numeric(cor.test(as.numeric(countsOnly_log10norm[1,]), 
-                                     as.numeric(countsOnly_log10norm[2,]),
-                                method="pearson")$estimate)
+                                                as.numeric(countsOnly_log10norm[2,]),
+                                                method="pearson")$estimate)
 
-#check number of sample pairs
+# check number of sample pairs
 a = usecase_metadataFile$SampleID[usecase_metadataFile$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[1]]
 b = usecase_metadataFile$SampleID[usecase_metadataFile$FMTGroupFMTsourcegtRecipientbackground==phenotypeList[2]]
 
 totalSamplePairs_within_a = choose(length(a),2)
 totalSamplePairs_within_b = choose(length(b),2)
+totalSamplePairs_across = length(a) * length(b)
+
+
 
 #########################################
 
@@ -46,3 +50,6 @@ test_that("Check for correct total number of correlations, within group  ",
 test_that("Check for correct total number of correlations, within group  ",
           expect_that(length(testoutput_withingroups[[2]]), equals(totalSamplePairs_within_b))
 )
+
+
+
