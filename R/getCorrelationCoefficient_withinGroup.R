@@ -1,6 +1,6 @@
 ## correlations for samples WITHIN Groups
 #input: list of group names, dataframe with counts and metadata, dataframe with counts only (lognormalized), correlation test, variableName is the column name of metadata, sampleColumnName is the column name of sample names
-#output: a list of group pair labels for each correlation,a list of lists of correlation coefficient for sample pairs across groups 
+#output: a list of group pair labels for each correlation,a list of lists of correlation coefficient for sample pairs within groups 
 
 getCorrelationCoefficient_withinGroup = function(groupList, tableWithMeta, tableCountsOnly, 
                                                  corrTestMethod, variableName, sampleColumnName){
