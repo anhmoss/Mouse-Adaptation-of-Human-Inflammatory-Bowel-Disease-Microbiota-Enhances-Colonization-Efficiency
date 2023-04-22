@@ -2,7 +2,7 @@
 #input: grouplist(list of phylum groups, can be a list of multiple phyla), tableWithMeta(dataframe with counts and metadata), 
 # tableCountsOnly(dataframe with counts only (lognormalized)), corrTestMethod(correlation test), 
 #sampleGroup (phenotype to subset the samples by (ie input/recipient), only one input), mappingMetaFile(metadata that maps asv/taxa to phyla)
-#output: a list of group pair labels for each correlation, a list of lists of correlation coefficient for sample pairs across groups 
+#output: a list of group pair labels for each correlation, a list of lists of correlation coefficient for sample pairs within groups
 
 getCorrelationCoefficient_withinGroup_phylumLevel_byGroup = function(groupList, tableWithMeta, tableCountsOnly, 
                                                                     corrTestMethod, sampleGroup, mappingMetaFile,
