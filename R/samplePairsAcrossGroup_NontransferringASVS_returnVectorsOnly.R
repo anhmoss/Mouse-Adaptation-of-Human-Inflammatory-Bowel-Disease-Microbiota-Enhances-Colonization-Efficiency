@@ -1,6 +1,6 @@
 ## get asv abundances of those that did not transfer
-#input: directory path for results, list of interest groups/labels, dataframe with counts and metadata, dataframe with counts only (lognormalized), correlation test/method, pick corr estimate or pval
-#output: a list of lists, of corr results within each interest group
+#input: list of interest groups/labels, tableWithMeta (dataframe with counts and metadata), tableCountsOnly (dataframe with counts only), sampleColumnName (column name sampleIDs), variableName (column name for variable of interest)
+#output: list of vectors with counts of the non-transferred ASVs
 
 samplePairsAcrossGroup_NontransferringASVS_returnVectors = function(groupList, tableWithMeta, 
                                                                     tableCountsOnly, sampleColumnName,
