@@ -27,10 +27,12 @@ b = usecase_metadataFile$SampleID[usecase_metadataFile$FMTGroupFMTsourcegtRecipi
 
 totalSamplePairs_across = length(a) * length(b)
 
+known_nontransferredASV_firstone = 13615
+
 #########################################
 
 test_that("Check for correct count values",
-          expect_that(testoutput_acrossgroups_ntASVs[[1]][[1]][1], equals(13615))
+          expect_that(testoutput_acrossgroups_ntASVs[[1]][[1]][1], equals(known_nontransferredASV_firstone))
           
 )
 test_that("Check for correct number of results",
