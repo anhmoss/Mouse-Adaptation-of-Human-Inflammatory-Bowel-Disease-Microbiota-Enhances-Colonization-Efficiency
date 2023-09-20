@@ -34,8 +34,8 @@ generateScatterPlots_samplePairsAcrossGroup_histogramOfNontransferringASVS = fun
           firstGroup_ASVsThatDidNotTransferToSecondGroup = myfirstGroup[myfirstGroup != 0 & mysecondGroup ==0]
           secondGroups_ASVsThatDidNotTransferToFirstGroup = mysecondGroup[mysecondGroup != 0 & myfirstGroup==0]
           
-          h1 = hist(firstGroup_ASVsThatDidNotTransferToSecondGroup, breaks=seq(0,5,length.out=10))
-          h2 = hist(secondGroups_ASVsThatDidNotTransferToFirstGroup, breaks=seq(0,5,length.out=10))
+          h1 = hist(firstGroup_ASVsThatDidNotTransferToSecondGroup, breaks=seq(0,5,length.out=20))
+          h2 = hist(secondGroups_ASVsThatDidNotTransferToFirstGroup, breaks=seq(0,5,length.out=20))
           
           pdf(paste0(resultsDirectory, "nonTransferredASVS_acrossGroups_", outfileLlabels_firstGroup, "_vs_",outfileLlabels_secondGroup,
                       rownames(df_firstGroup[i,]), "_vs_", rownames(df_secondGroup[k,]), ".pdf"))
