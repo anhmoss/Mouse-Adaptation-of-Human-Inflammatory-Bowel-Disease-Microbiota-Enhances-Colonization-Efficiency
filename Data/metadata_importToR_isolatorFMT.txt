@@ -1,0 +1,11 @@
+CoreID	SampleID	UniversalCageNumber	Day	Background	FMTGroup	Treatment	Sex	Age	SampleType	Freezerbox
+Simon_69	F31-1	F31-cage-1	28	129.IL10KO	h3-4-5->KO	None	F	17.29	Fecal Pellet	206
+Simon_70	F31-2	F31-cage-1	28	129.IL10KO	h3-4-5->KO	None	F	17.29	Fecal Pellet	206
+Simon_71	F31-3	F31-cage-1	28	129.IL10KO	h3-4-5->KO	None	F	17.29	Fecal Pellet	206
+Simon_72	F31-4	F31-cage-2	28	129.IL10KO	h3-4-5->KO	None	M	17.29	Fecal Pellet	206
+Simon_73	F31-5	F31-cage-2	28	129.IL10KO	h3-4-5->KO	None	M	17.29	Fecal Pellet	206
+Simon_74	F31-6	F31-cage-2	28	129.IL10KO	h3-4-5->KO	None	M	17.29	Fecal Pellet	206
+Simon_75	F31-7	F31-cage-3	28	129.IL10KO	h3-4-5->KO	None	F	13.29	Fecal Pellet	206
+Simon_76	F31-8	F31-cage-3	28	129.IL10KO	h3-4-5->KO	None	F	13.29	Fecal Pellet	206
+Simon_77	F31-9	F31-cage-3	28	129.IL10KO	h3-4-5->KO	None	F	13.29	Fecal Pellet	206
+Simon_112	h3-4-5	NA	NA	NA	h3-4-5_input	NA	NA	NA	Human stool	206
