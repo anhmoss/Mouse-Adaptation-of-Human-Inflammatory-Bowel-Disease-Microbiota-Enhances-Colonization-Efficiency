@@ -5,6 +5,7 @@ In our manuscript, we present a transfer efficiency analysis of a fecal microbio
 Here, we provide all the data files and code that we used for our analysis.  With these files, one can easily replicate our figures and results. 
 
 
+
 Data Files
 
 For this analysis, the 16S rRNA sequence data was processed through the QIIME2 (ver. 2021.2) pipeline and taxonomically classified with DADA2 (ver. 2021.2), resulting in tab-delimited counts data.  
@@ -13,9 +14,11 @@ The original counts files are labeled as “feature_table”, while the counts f
 Early in our analysis, we updated the labeling nomenclature system of our different FMT groups and samples for easier readability.  As such, we have posted metadata with both the original and current nomenclature, the latter which we used in our analysis pipeline.   
 
 
+
 QIIME2 Scripts
 
 These are bash scripts that were submitted and ran on the high-performance computing (HPC) cluster at the University of North Carolina at Charlotte, with the function of running raw sequence files (fastq format) with the DADA2 classification through the QIIME2 pipeline.  The resulting output are the tab-delimited counts tables at the phylum, genus, and ASV level.  
+
 
 
 R Scripts
@@ -23,6 +26,7 @@ R Scripts
 Our goal is to provide scripts that easily replicate and reproduce our analysis.  Here, we have individual R scripts and an R Notebook.  The R Notebook is available in both the R markdown file (RunAllTasks.Rmd) and an HTML file (RunAllTasks.html) for viewing on a browser. 
 Each individual R script contains code that performs a specific task (a function), and all of these R functions are invoked throughout the main analysis pipeline, which is provided in the R Notebook.  The R Notebook presents detailed information of each step of our pipeline, as well as all the code to generate figures and tables that are published in our paper.  
 To reproduce the figures from this analysis, one would run the code chunks sequentially listed in the R Notebook.  All files are read into the R scripts with relative paths.  Therefore, before running scripts from the R Notebook, please ensure that all R scripts are in the same directory as the R Notebook.  In our analysis, we organized our files within an R project directory, so we recommend organizing all data, metadata and R script files into the same directory, with the data and metadata in a subdirectory (“files”).  
+
 
 
 Testing
