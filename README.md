@@ -1,4 +1,4 @@
-# FMTModelForHumanizedMice
+# Mouse Adaptation of Human Inflammatory Bowel Disease Microbiota Enhances Colonization Efficiency
 
 Overview
 
